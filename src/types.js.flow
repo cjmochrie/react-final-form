@@ -87,8 +87,9 @@ export type FieldProps = {
   validate?: FieldValidator,
   validateFields?: string[],
   value?: any
-} & RenderableProps<FieldRenderProps> & {
-  component?: React.ComponentType<*> | SupportedInputs
+} & {
+  ...RenderableProps<FieldRenderProps>,
+  component?: React.ComponentType<*> | SupportedInputs,
 }
 
 export type FormSpyProps = {
